@@ -1,0 +1,6 @@
+node_modules
+init.md
+.env
+.dist
+dist
+.DS_Store
