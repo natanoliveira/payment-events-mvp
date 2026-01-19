@@ -70,7 +70,7 @@ export class PaymentsService {
       return { payment: saved, receipt };
     } catch (error) {
       this.logger.error(
-        `Confirm FAILED personId=${input.personId} reference=${input.reference}`,
+        `Confirm FAILED personId = ${input.personId} reference = ${input.reference}`,
         error instanceof Error ? error.stack : undefined,
       );
       throw error;
@@ -83,7 +83,7 @@ export class PaymentsService {
         relations: ['person'],
         order: { createdAt: 'DESC' },
       });
-      this.logger.log(`list ok count=${payments.length}`);
+      this.logger.log(`list ok count = ${payments.length}`);
       return payments;
     } catch (error) {
       this.logger.error(
@@ -102,12 +102,12 @@ export class PaymentsService {
         order: { createdAt: 'DESC' },
       });
       this.logger.log(
-        `list by person ok personId=${personId} count=${payments.length}`,
+        `list by person ok personId = ${personId} count = ${payments.length}`,
       );
       return payments;
     } catch (error) {
       this.logger.error(
-        `list by person failed personId=${personId}`,
+        `list by person failed personId = ${personId}`,
         error instanceof Error ? error.stack : undefined,
       );
       throw error;
